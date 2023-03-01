@@ -1,5 +1,6 @@
-const schedule = require("node-schedule");
+const schedule = require('node-schedule');
 
-const LogSec = shedule('*/1***', ()=> {{
-    console.log("The time is: ", Date.now().toLocaleString())
-}})
+const job = schedule.scheduleJob('* * * * *', function() {
+    console.log("My first cron job.");
+    // console.log("The time is: ", Date.now().toLocaleString())
+})
